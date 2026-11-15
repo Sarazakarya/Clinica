@@ -1,0 +1,2598 @@
+{
+  "info": {
+    "_collection_link": "https://go.postman.co/collection/49925833-780d4453-956f-497c-9129-0b046fc8a12f?source=collection_link",
+    "_exporter_id": "49925833",
+    "_postman_id": "780d4453-956f-497c-9129-0b046fc8a12f",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "name": "add awards",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "body": {
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "src": [
+                        "/C:/Users/DELL/OneDrive/Pictures/Screenshot 2026-09-16 215806.png"
+                      ],
+                      "type": "file"
+                    },
+                    {
+                      "key": "title",
+                      "type": "text",
+                      "value": "جائزه افضل طبيب"
+                    },
+                    {
+                      "key": "desc",
+                      "type": "text",
+                      "value": "نقابه الطبيه"
+                    }
+                  ],
+                  "mode": "formdata"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "me",
+                    "awards"
+                  ],
+                  "raw": "{{base_url}}/api/v1/user/me/awards"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update awards",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "body": {
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "src": [
+                        "/C:/Users/DELL/OneDrive/Pictures/Screenshot 2026-09-16 215806.png"
+                      ],
+                      "type": "file"
+                    },
+                    {
+                      "disabled": true,
+                      "key": "title",
+                      "type": "text",
+                      "value": "جائزه افضل طبيب"
+                    },
+                    {
+                      "disabled": true,
+                      "key": "desc",
+                      "type": "text",
+                      "value": ""
+                    },
+                    {
+                      "disabled": true,
+                      "key": "removeFile",
+                      "type": "text",
+                      "value": "true"
+                    }
+                  ],
+                  "mode": "formdata"
+                },
+                "header": [],
+                "method": "PATCH",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "me",
+                    "awards",
+                    "6abbd13cb6767184a807480b"
+                  ],
+                  "raw": "{{base_url}}/api/v1/user/me/awards/6abbd13cb6767184a807480b"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete awards",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "header": [],
+                "method": "DELETE",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "me",
+                    "awards",
+                    "6abbd0cbb6767184a80747f1"
+                  ],
+                  "raw": "{{base_url}}/api/v1/user/me/awards/6abbd0cbb6767184a80747f1"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get one awards",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "me",
+                    "awards",
+                    "6abbd13cb6767184a807480b"
+                  ],
+                  "raw": "{{base_url}}/api/v1/user/me/awards/6abbd13cb6767184a807480b"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get user awards",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "me",
+                    "awards"
+                  ],
+                  "raw": "{{base_url}}/api/v1/user/me/awards"
+                }
+              },
+              "response": []
+            }
+          ],
+          "name": "awards"
+        },
+        {
+          "item": [
+            {
+              "name": "add certificates",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "body": {
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "src": [
+                        "/C:/Users/DELL/OneDrive/Pictures/133914402776575299.jpg"
+                      ],
+                      "type": "file"
+                    },
+                    {
+                      "key": "title",
+                      "type": "text",
+                      "value": "شهاده للطب الباطني"
+                    },
+                    {
+                      "key": "desc",
+                      "type": "text",
+                      "value": "البورد الامريكي للطب "
+                    }
+                  ],
+                  "mode": "formdata"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "me",
+                    "certificates"
+                  ],
+                  "raw": "{{base_url}}/api/v1/user/me/certificates"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update certificates",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "body": {
+                  "formdata": [
+                    {
+                      "disabled": true,
+                      "key": "file",
+                      "src": [
+                        "/C:/Users/DELL/OneDrive/Pictures/133914402776575299.jpg"
+                      ],
+                      "type": "file"
+                    },
+                    {
+                      "disabled": true,
+                      "key": "title",
+                      "type": "text",
+                      "value": "شهاده للطب الباطني"
+                    },
+                    {
+                      "disabled": true,
+                      "key": "desc",
+                      "type": "text",
+                      "value": ""
+                    },
+                    {
+                      "key": "removeFile",
+                      "type": "text",
+                      "value": "true"
+                    }
+                  ],
+                  "mode": "formdata"
+                },
+                "header": [],
+                "method": "PATCH",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "me",
+                    "certificates",
+                    "6abbbf22be2b1bff146584f3"
+                  ],
+                  "raw": "{{base_url}}/api/v1/user/me/certificates/6abbbf22be2b1bff146584f3"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete certificates",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "header": [],
+                "method": "DELETE",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "me",
+                    "certificates",
+                    "6abad16140464c9597560ebc"
+                  ],
+                  "raw": "{{base_url}}/api/v1/user/me/certificates/6abad16140464c9597560ebc"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get user certificates",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "me",
+                    "certificates"
+                  ],
+                  "raw": "{{base_url}}/api/v1/user/me/certificates"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get one certificate",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "me",
+                    "certificates",
+                    "6ab9a5920dae6efbd37b4aa0"
+                  ],
+                  "raw": "{{base_url}}/api/v1/user/me/certificates/6ab9a5920dae6efbd37b4aa0"
+                }
+              },
+              "response": []
+            }
+          ],
+          "name": "certifications"
+        },
+        {
+          "name": "login",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n    \"email\": \"mostafamahmoud@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ],
+              "raw": "{{base_url}}/api/v1/auth/login"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create account",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": ""
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "formdata": [
+                {
+                  "key": "name",
+                  "type": "text",
+                  "value": "mostafa mohmoud"
+                },
+                {
+                  "key": "email",
+                  "type": "text",
+                  "value": "mostafamahmoud@gmail.com"
+                },
+                {
+                  "key": "password",
+                  "type": "text",
+                  "value": "12345678"
+                },
+                {
+                  "key": "role",
+                  "type": "text",
+                  "value": "doctor"
+                },
+                {
+                  "disabled": true,
+                  "key": "img",
+                  "src": [
+                    ""
+                  ],
+                  "type": "file"
+                },
+                {
+                  "disabled": true,
+                  "key": "phone",
+                  "type": "text",
+                  "value": "010000000"
+                },
+                {
+                  "disabled": true,
+                  "key": "workingHours",
+                  "type": "text",
+                  "value": "10:00 AM - 06:00 PM"
+                },
+                {
+                  "disabled": true,
+                  "key": "gender",
+                  "type": "text",
+                  "value": "male"
+                },
+                {
+                  "disabled": true,
+                  "key": "dateOfBirth",
+                  "type": "text",
+                  "value": "10-1-1995"
+                },
+                {
+                  "disabled": true,
+                  "key": "specialty",
+                  "type": "text",
+                  "value": "اخصائي باطنه"
+                },
+                {
+                  "disabled": true,
+                  "key": "clinicAddress",
+                  "type": "text",
+                  "value": "القاهره - مصر"
+                },
+                {
+                  "disabled": true,
+                  "key": "experienceYears",
+                  "type": "text",
+                  "value": "10"
+                },
+                {
+                  "disabled": true,
+                  "key": "bio",
+                  "type": "text",
+                  "value": "bio"
+                },
+                {
+                  "disabled": true,
+                  "key": "",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "disabled": true,
+                  "key": "",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "disabled": true,
+                  "key": "",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "disabled": true,
+                  "key": "",
+                  "type": "text",
+                  "value": ""
+                }
+              ],
+              "mode": "formdata"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user"
+              ],
+              "raw": "{{base_url}}/api/v1/user"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all accounts",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{admin token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user"
+              ],
+              "raw": "{{base_url}}/api/v1/user"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get my account",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{json_web_token_0fzu}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              },
+              "raw": "{\r\n    \"name\":\"ahmed\",\r\n    \"email\": \"ahmed@email\",\r\n    \"password\": \"123\",\r\n    \"role\":\"doctor\",\r\n    \"permissions\": [\r\n    \"patients.read\",\r\n    \"patients.create\",\r\n    \"patients.update\",\r\n    \"appointments.read\",\r\n    \"appointments.create\",\r\n    \"appointments.update\",\r\n    \"medicalRecords.read\",\r\n    \"medicalRecords.create\",\r\n    \"prescriptions.create\"\r\n  ]\r\n}"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "me"
+              ],
+              "raw": "{{base_url}}/api/v1/user/me"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all doctor",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{admin token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "doctors"
+              ],
+              "raw": "{{base_url}}/api/v1/user/doctors"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get account by admin",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{admin token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "6ab5d9be650eb93cb1107cef"
+              ],
+              "raw": "{{base_url}}/api/v1/user/6ab5d9be650eb93cb1107cef"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update my account",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "formdata": [
+                {
+                  "key": "name",
+                  "type": "text",
+                  "value": "mostafa mahmoud"
+                },
+                {
+                  "disabled": true,
+                  "key": "email",
+                  "type": "text",
+                  "value": "clinicahealth123@gmail.com"
+                },
+                {
+                  "disabled": true,
+                  "key": "img",
+                  "src": [
+                    "/C:/Users/DELL/OneDrive/Pictures/133914402776575299.jpg"
+                  ],
+                  "type": "file"
+                },
+                {
+                  "disabled": true,
+                  "key": "removeImage",
+                  "type": "text",
+                  "value": "true"
+                },
+                {
+                  "disabled": true,
+                  "key": "",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "disabled": true,
+                  "key": "",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "disabled": true,
+                  "key": "",
+                  "type": "text",
+                  "value": ""
+                }
+              ],
+              "mode": "formdata"
+            },
+            "header": [],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "me"
+              ],
+              "raw": "{{base_url}}/api/v1/user/me"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update account by admin",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{admin token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "formdata": [
+                {
+                  "disabled": true,
+                  "key": "name",
+                  "type": "text",
+                  "value": "ali"
+                },
+                {
+                  "disabled": true,
+                  "key": "email",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "disabled": true,
+                  "key": "role",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "key": "img",
+                  "src": [
+                    "/C:/Users/DELL/OneDrive/Pictures/img.png"
+                  ],
+                  "type": "file"
+                },
+                {
+                  "disabled": true,
+                  "key": "removeImage",
+                  "type": "text",
+                  "value": "true"
+                }
+              ],
+              "mode": "formdata"
+            },
+            "header": [],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "6abf9815e74ce74e99f463e6"
+              ],
+              "raw": "{{base_url}}/api/v1/user/6abf9815e74ce74e99f463e6"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "auth"
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "name": "add attchments",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "body": {
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "src": [
+                        "/C:/Users/DELL/OneDrive/Pictures/133909809167631686.jpg"
+                      ],
+                      "type": "file"
+                    },
+                    {
+                      "key": "fileName",
+                      "type": "text",
+                      "value": "سونار علي البطن"
+                    },
+                    {
+                      "key": "fileType",
+                      "type": "text",
+                      "value": "اشعه"
+                    },
+                    {
+                      "key": "description",
+                      "type": "text",
+                      "value": "لا توجد مشاكل واضحه"
+                    }
+                  ],
+                  "mode": "formdata"
+                },
+                "header": [],
+                "method": "POST",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "patient",
+                    "6ace6108289fcc5df776a4be",
+                    "attachments"
+                  ],
+                  "raw": "{{base_url}}/api/v1/patient/6ace6108289fcc5df776a4be/attachments"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "update attchments",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "body": {
+                  "formdata": [
+                    {
+                      "disabled": true,
+                      "key": "file",
+                      "src": [
+                        "/D:/Jana Sobih.cv .pdf"
+                      ],
+                      "type": "file"
+                    },
+                    {
+                      "key": "fileName",
+                      "type": "text",
+                      "value": "سونار "
+                    },
+                    {
+                      "disabled": true,
+                      "key": "fileType",
+                      "type": "text",
+                      "value": "اشعه"
+                    },
+                    {
+                      "disabled": true,
+                      "key": "description",
+                      "type": "text",
+                      "value": "لا توجد مشاكل واضحه"
+                    },
+                    {
+                      "disabled": true,
+                      "key": "removeFile",
+                      "type": "text",
+                      "value": "true"
+                    }
+                  ],
+                  "mode": "formdata"
+                },
+                "header": [],
+                "method": "PATCH",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "patient",
+                    "6ace6108289fcc5df776a4be",
+                    "attachments",
+                    "6ace62a2d7e2a5822ae93d58"
+                  ],
+                  "raw": "{{base_url}}/api/v1/patient/6ace6108289fcc5df776a4be/attachments/6ace62a2d7e2a5822ae93d58"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete attchment",
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "body": {
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "src": "/D:/Jana Sobih.cv .pdf",
+                      "type": "file"
+                    },
+                    {
+                      "key": "fileName",
+                      "type": "text",
+                      "value": "سونار علي البطن"
+                    },
+                    {
+                      "key": "fileType",
+                      "type": "text",
+                      "value": "اشعه"
+                    },
+                    {
+                      "key": "description",
+                      "type": "text",
+                      "value": "لا توجد مشاكل واضحه"
+                    }
+                  ],
+                  "mode": "formdata"
+                },
+                "header": [],
+                "method": "DELETE",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "patient",
+                    "6ace6108289fcc5df776a4be",
+                    "attachments",
+                    "6ace62a2d7e2a5822ae93d58"
+                  ],
+                  "raw": "{{base_url}}/api/v1/patient/6ace6108289fcc5df776a4be/attachments/6ace62a2d7e2a5822ae93d58"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get pateint attchments",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "body": {
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "src": "/D:/Jana Sobih.cv .pdf",
+                      "type": "file"
+                    },
+                    {
+                      "key": "fileName",
+                      "type": "text",
+                      "value": "سونار علي البطن"
+                    },
+                    {
+                      "key": "fileType",
+                      "type": "text",
+                      "value": "اشعه"
+                    },
+                    {
+                      "key": "description",
+                      "type": "text",
+                      "value": "لا توجد مشاكل واضحه"
+                    }
+                  ],
+                  "mode": "formdata"
+                },
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "patient",
+                    "6abc042fe87ffce1f350cc10",
+                    "attachments"
+                  ],
+                  "raw": "{{base_url}}/api/v1/patient/6abc042fe87ffce1f350cc10/attachments"
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get one attchment",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "type": "string",
+                      "value": "{{user token}}"
+                    }
+                  ],
+                  "type": "bearer"
+                },
+                "body": {
+                  "formdata": [
+                    {
+                      "key": "file",
+                      "src": "/D:/Jana Sobih.cv .pdf",
+                      "type": "file"
+                    },
+                    {
+                      "key": "fileName",
+                      "type": "text",
+                      "value": "سونار علي البطن"
+                    },
+                    {
+                      "key": "fileType",
+                      "type": "text",
+                      "value": "اشعه"
+                    },
+                    {
+                      "key": "description",
+                      "type": "text",
+                      "value": "لا توجد مشاكل واضحه"
+                    }
+                  ],
+                  "mode": "formdata"
+                },
+                "header": [],
+                "method": "GET",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "patient",
+                    "6abc042fe87ffce1f350cc10",
+                    "attachments",
+                    "6abc063e66b2d9cf7177b40e"
+                  ],
+                  "raw": "{{base_url}}/api/v1/patient/6abc042fe87ffce1f350cc10/attachments/6abc063e66b2d9cf7177b40e"
+                }
+              },
+              "response": []
+            }
+          ],
+          "name": "attchments"
+        },
+        {
+          "name": "create patient",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"name\": \"jana jana jana\",\r\n  \"phone\": \"01012345678\",\r\n  \"otherPhone\": \"01112345678\",\r\n  \"email\": \"janajana@gmail.com\",\r\n  \"gender\": \"female\",\r\n  \"dateOfBirth\": \"1995-05-20\",\r\n  \"nationalID\": \"29505201234567\",\r\n  \"address\": \"Cairo, Egypt\",\r\n\r\n\r\n  \"bloodType\": \"O+\",\r\n   \"allergies\": [\r\n    \"Penicillin\",\r\n    \"Aspirin\",\r\n    \"Dust\"\r\n  ],\r\n\r\n  \"chronicDiseases\": [\r\n    \"Diabetes\",\r\n    \"Hypertension\"\r\n  ],\r\n\r\n  \"medications\": [\r\n    \"Metformin\",\r\n    \"Amlodipine\"\r\n  ],\r\n    \"previousSurgeries\": [\r\n    {\r\n      \"name\": \"Appendectomy\",\r\n      \"date\": \"2022-05-10\"\r\n    }\r\n  ],\r\n  \"familyMedicalHistory\": \"Diabetes\",\r\n  \"medicalHistory\": \"Previous surgery\",\r\n\r\n  \"emergencyName\": \"Sobih\",\r\n  \"emergencyPhone\": \"01098765432\",\r\n  \"emergencyRelationship\": \"Father\",\r\n\r\n  \"insuranceCompany\": \"Misr Insurance\",\r\n  \"memberNumber\": \"INS123456\",\r\n  \"coverageRatio\": 80,\r\n  \"insuranceEndDate\": \"2027-12-31\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "patient"
+              ],
+              "raw": "{{base_url}}/api/v1/patient"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update patient",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"name\": \"Jana jana update\",\r\n  \"phone\": \"01012345678\",\r\n  \"otherPhone\": \"01198765432\",\r\n  \"email\": \"jana@example.com\",\r\n  \"gender\": \"female\",\r\n  \"dateOfBirth\": \"2005-04-15\",\r\n  \"nationalID\": \"30504151234567\",\r\n  \"address\": \"6 October, Giza\",\r\n\r\n  \"bloodType\": \"O+\",\r\n   \"allergies\": [\r\n    \"Penicillin\",\r\n    \"Aspirin\",\r\n    \"Dust\"\r\n  ],\r\n\r\n  \"chronicDiseases\": [\r\n    \"Diabetes\",\r\n    \"Hypertension\"\r\n  ],\r\n\r\n  \"medications\": [\r\n    \"Metformin\",\r\n    \"Amlodipine\"\r\n  ],\r\n    \"previousSurgeries\": [\r\n    {\r\n      \"name\": \"Appendectomy\",\r\n      \"date\": \"2022-05-10\"\r\n    }\r\n  ],\r\n  \"familyMedicalHistory\": \"Diabetes\",\r\n  \"medicalHistory\": \"Previous surgery\",\r\n\r\n  \"emergencyName\": \"Sobih\",\r\n  \"emergencyPhone\": \"01098765432\",\r\n  \"emergencyRelationship\": \"Father\",\r\n\r\n  \"insuranceCompany\": \"Misr Insurance\",\r\n  \"memberNumber\": \"INS123456\",\r\n  \"coverageRatio\": 80,\r\n  \"insuranceEndDate\": \"2027-12-31\"\r\n}"
+            },
+            "header": [],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "patient",
+                "6ace6108289fcc5df776a4be"
+              ],
+              "raw": "{{base_url}}/api/v1/patient/6ace6108289fcc5df776a4be"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all patients",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "patient"
+              ],
+              "raw": "{{base_url}}/api/v1/patient"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get one patient",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "text"
+                }
+              },
+              "raw": ""
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "patient",
+                "6ac7e314e2b04d304ca62e0e"
+              ],
+              "raw": "{{base_url}}/api/v1/patient/6ac7e314e2b04d304ca62e0e"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "patient"
+    },
+    {
+      "item": [
+        {
+          "name": "add appointment",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"patientType\":\"existing\",\r\n  \"patient\": \"6abc10b46c16a843d7f8a9b2\",\r\n//  \"newPatient\": {\r\n//     \"name\": \"Ahmed Ali \",\r\n//     \"phone\": \"01012345678\",\r\n//     \"email\": \"ahmed@gmail.com\",\r\n//     \"gender\": \"male\",\r\n//     \"dateOfBirth\": \"1998-05-10\",\r\n//     \"nationalID\": \"12345678901234\"\r\n//     },\r\n\r\n  \"doctor\": \"6aa590567ea21f2e8355418a\",\r\n  \"date\": \"2026-11-30\",\r\n  \"startTime\": \"03:00\",\r\n  \"duration\":\"30\",\r\n  \"status\":\"pending\",\r\n  \"type\": \"consultation\",\r\n  \"note\":\"nothing\"\r\n}\r\n\r\n"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "appointment"
+              ],
+              "raw": "{{base_url}}/api/v1/appointment"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update appointment",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n   \"status\":\"confirmed\",\r\n   \"type\": \"check-up\"\r\n}"
+            },
+            "header": [],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "appointment",
+                "6ace37bb732ee24da187ce98"
+              ],
+              "raw": "{{base_url}}/api/v1/appointment/6ace37bb732ee24da187ce98"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete appointment",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "DELETE",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "appointment",
+                "6ace37bb732ee24da187ce98"
+              ],
+              "raw": "{{base_url}}/api/v1/appointment/6ace37bb732ee24da187ce98"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all appointment",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "appointment"
+              ],
+              "raw": "{{base_url}}/api/v1/appointment"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get appointment",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "appointment",
+                "6abc10b46c16a843d7f8a9b3"
+              ],
+              "raw": "{{base_url}}/api/v1/appointment/6abc10b46c16a843d7f8a9b3"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get doctor appointment",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "appointment",
+                "doctor",
+                "6aa590567ea21f2e8355418a"
+              ],
+              "raw": "{{base_url}}/api/v1/appointment/doctor/6aa590567ea21f2e8355418a"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get patient appointment",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "appointment",
+                "patient",
+                "6abc10b46c16a843d7f8a9b2"
+              ],
+              "raw": "{{base_url}}/api/v1/appointment/patient/6abc10b46c16a843d7f8a9b2"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "appointment مواعيد"
+    },
+    {
+      "item": [
+        {
+          "name": "add visit",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"patient\": \"6ac77a0c4a47f347320cf43f\",\r\n  \"doctor\": \"6abf9815e74ce74e99f463e6\",\r\n  \"visitDate\": \"2026-10-30T10:30:00.000Z\",\r\n  \"reason\": \"ألم شديد في المعدة\",\r\n  \"vitalSigns\": {\r\n    \"weight\": 82,\r\n    \"height\": 178,\r\n    \"pulse\": 78,\r\n    \"temperature\": 36.8\r\n  },\r\n  \"diagnosis\": \"التهاب المعدة الحاد\",\r\n  \"treatment\": \"استخدام دواء 20 مجم مرتين يوميًا\",\r\n  \"doctorNotes\": \"ينصح بتجنب الأطعمة الحارة والمشروبات الغازية\",\r\n  \"followUpDate\": \"2026-09-13T10:30:00.000Z\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "visit"
+              ],
+              "raw": "{{base_url}}/api/v1/visit"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update visit",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n     \"reason\": \"ألم شديد  في المعدة\"\r\n}"
+            },
+            "header": [],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "visit",
+                "6ace5fcf521f0eb2baa6f4f7"
+              ],
+              "raw": "{{base_url}}/api/v1/visit/6ace5fcf521f0eb2baa6f4f7"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all visit",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "visit"
+              ],
+              "raw": "{{base_url}}/api/v1/visit"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get one visit",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "visit",
+                "6a94c45a285facbcac5fe996"
+              ],
+              "raw": "{{base_url}}/api/v1/visit/6a94c45a285facbcac5fe996"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get patient visit",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "visit",
+                "patient",
+                "6a918a5d4d71e888d3002d78"
+              ],
+              "raw": "{{base_url}}/api/v1/visit/patient/6a918a5d4d71e888d3002d78"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "visit الزيارات"
+    },
+    {
+      "item": [
+        {
+          "name": "add invoice",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"patient\": \"6ac77a0c4a47f347320cf43f\",\r\n  \"doctor\": \"6abf9815e74ce74e99f463e6\",\r\n\r\n  \"services\": [\r\n    {\r\n      \"name\": \"كشف طبي\",\r\n      \"price\": 300,\r\n      \"discount\": 50\r\n    },\r\n    {\r\n      \"name\": \"أشعة\",\r\n      \"price\": 500,\r\n      \"discount\": 100\r\n    },\r\n    {\r\n      \"name\": \"تحاليل\",\r\n      \"price\": 200,\r\n      \"discount\": 0\r\n    }\r\n  ],\r\n  \"paid\": 800,\r\n  \"paymentMethod\": \"cash\",\r\n  \"notes\": \"المريض دفع الفاتورة\",\r\n  \"TermsAndConditions\": \"الدفع غير قابل للاسترداد بعد تقديم الخدمة.\"\r\n}\r\n"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "invoice"
+              ],
+              "raw": "{{base_url}}/api/v1/invoice"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update invoice",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "\r\n{\r\n  \"services\": [\r\n    {\r\n      \"name\": \"Consultation\",\r\n      \"price\": 500,\r\n      \"discount\": 50\r\n    },\r\n    {\r\n      \"name\": \"Medical Examination\",\r\n      \"price\": 300,\r\n      \"discount\": 0\r\n    }\r\n  ],\r\n  \"paid\": 400,\r\n  \"paymentMethod\": \"cash\",\r\n  \"notes\": \"Updated invoice\",\r\n  \"TermsAndConditions\": \"Payment is non-refundable\",\r\n  \"invoiceDate\": \"2026-10-15T10:00:00.000Z\"\r\n}\r\n\r\n"
+            },
+            "header": [],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "invoice",
+                "6ace3acc75e476ec08c70212"
+              ],
+              "raw": "{{base_url}}/api/v1/invoice/6ace3acc75e476ec08c70212"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all invoice",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "invoice"
+              ],
+              "raw": "{{base_url}}/api/v1/invoice"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get one invoice",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "invoice",
+                "6aa436bff975feb5d4bdfce3"
+              ],
+              "raw": "{{base_url}}/api/v1/invoice/6aa436bff975feb5d4bdfce3"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get patient invoice",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "invoice",
+                "patient",
+                "6a94c285bc78daf3d1c3c515"
+              ],
+              "raw": "{{base_url}}/api/v1/invoice/patient/6a94c285bc78daf3d1c3c515"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get doctor invoice",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "invoice",
+                "doctor",
+                "6a94c5580f2656c2e3101400"
+              ],
+              "raw": "{{base_url}}/api/v1/invoice/doctor/6a94c5580f2656c2e3101400"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "invoice فواتير"
+    },
+    {
+      "item": [
+        {
+          "name": "add and update settings",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{admin token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "formdata": [
+                {
+                  "disabled": true,
+                  "key": "clinicName",
+                  "type": "text",
+                  "value": "Clinika Clinic"
+                },
+                {
+                  "disabled": true,
+                  "key": "phone",
+                  "type": "text",
+                  "value": "01000000000"
+                },
+                {
+                  "key": "email",
+                  "type": "text",
+                  "value": "clinicahealth123@gmail.com"
+                },
+                {
+                  "disabled": true,
+                  "key": "address",
+                  "type": "text",
+                  "value": "6 October, Giza"
+                },
+                {
+                  "disabled": true,
+                  "key": "logo",
+                  "src": [
+                    "/C:/Users/DELL/OneDrive/Pictures/klinika logo.png"
+                  ],
+                  "type": "file"
+                },
+                {
+                  "disabled": true,
+                  "key": "removeLogo",
+                  "type": "text",
+                  "value": "true"
+                },
+                {
+                  "disabled": true,
+                  "key": "workingDays",
+                  "type": "text",
+                  "value": "[\"saturday\",\"sunday\",\"monday\",\"tuesday\",\"wednesday\"]"
+                },
+                {
+                  "disabled": true,
+                  "key": "workingHours[start]",
+                  "type": "text",
+                  "value": "10:00"
+                },
+                {
+                  "disabled": true,
+                  "key": "workingHours[end]",
+                  "type": "text",
+                  "value": "15:00"
+                },
+                {
+                  "disabled": true,
+                  "key": "paymentMethods",
+                  "type": "text",
+                  "value": "[\"cash\",\"card\"]"
+                },
+                {
+                  "disabled": true,
+                  "key": "taxRate",
+                  "type": "text",
+                  "value": "10"
+                },
+                {
+                  "disabled": true,
+                  "key": "appointmentDuration",
+                  "type": "text",
+                  "value": "5"
+                },
+                {
+                  "disabled": true,
+                  "key": "maxAdvanceBookingDays",
+                  "type": "text",
+                  "value": "30"
+                },
+                {
+                  "disabled": true,
+                  "key": "minAdvanceBookingHours",
+                  "type": "text",
+                  "value": "15"
+                }
+              ],
+              "mode": "formdata"
+            },
+            "header": [],
+            "method": "PUT",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "settings"
+              ],
+              "raw": "{{base_url}}/api/v1/settings"
+            }
+          },
+          "response": [
+            {
+              "_postman_previewlanguage": "json",
+              "body": "{\n  \"status\": \"success\",\n  \"message\": \"Settings updated successfully\",\n  \"data\": {\n    \"workingHours\": {\n      \"start\": \"10:00\",\n      \"end\": \"15:00\"\n    },\n    \"_id\": \"6ab96f58851345e0acebbad3\",\n    \"clinicName\": \"Clinika Clinic\",\n    \"phone\": \"01000000000\",\n    \"email\": \"clinicahealth123@gmail.com\",\n    \"address\": \"6 October, Giza\",\n    \"logo\": \"https://res.cloudinary.com/kdvglfe3/image/upload/v1790537701/klinika/patients/a1pnxobfyhr5alntttdh.png\",\n    \"workingDays\": [\n      \"saturday\",\n      \"sunday\",\n      \"monday\",\n      \"tuesday\",\n      \"wednesday\"\n    ],\n    \"paymentMethods\": [\n      \"cash\",\n      \"card\"\n    ],\n    \"taxRate\": 10,\n    \"appointmentDuration\": 5,\n    \"maxAdvanceBookingDays\": 30,\n    \"minAdvanceBookingHours\": 15,\n    \"createdAt\": \"2026-09-27T19:32:40.514Z\",\n    \"updatedAt\": \"2026-09-27T19:55:05.178Z\",\n    \"__v\": 1\n  }\n}",
+              "code": 200,
+              "cookie": [],
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "access-control-allow-origin",
+                  "value": "*"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "658"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"292-wiGkub7mIAu2OGvTPXW6Rz3RC4c\""
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 27 Sep 2026 19:55:05 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "name": "add and update settings",
+              "originalRequest": {
+                "body": {
+                  "formdata": [
+                    {
+                      "key": "clinicName",
+                      "type": "text",
+                      "value": "Clinika Clinic"
+                    },
+                    {
+                      "key": "phone",
+                      "type": "text",
+                      "value": "01000000000"
+                    },
+                    {
+                      "key": "email",
+                      "type": "text",
+                      "value": "clinicahealth123@gmail.com"
+                    },
+                    {
+                      "key": "address",
+                      "type": "text",
+                      "value": "6 October, Giza"
+                    },
+                    {
+                      "key": "logo",
+                      "src": [
+                        "/C:/Users/DELL/OneDrive/Pictures/klinika logo.png"
+                      ],
+                      "type": "file"
+                    },
+                    {
+                      "key": "workingDays",
+                      "type": "text",
+                      "value": "[\"saturday\",\"sunday\",\"monday\",\"tuesday\",\"wednesday\"]"
+                    },
+                    {
+                      "key": "workingHours[start]",
+                      "type": "text",
+                      "value": "10:00"
+                    },
+                    {
+                      "key": "workingHours[end]",
+                      "type": "text",
+                      "value": "15:00"
+                    },
+                    {
+                      "key": "paymentMethods",
+                      "type": "text",
+                      "value": "[\"cash\",\"card\"]"
+                    },
+                    {
+                      "key": "taxRate",
+                      "type": "text",
+                      "value": "10"
+                    },
+                    {
+                      "key": "appointmentDuration",
+                      "type": "text",
+                      "value": "5"
+                    },
+                    {
+                      "key": "maxAdvanceBookingDays",
+                      "type": "text",
+                      "value": "30"
+                    },
+                    {
+                      "key": "minAdvanceBookingHours",
+                      "type": "text",
+                      "value": "15"
+                    }
+                  ],
+                  "mode": "formdata"
+                },
+                "header": [],
+                "method": "PUT",
+                "url": {
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "settings"
+                  ],
+                  "raw": "{{base_url}}/api/v1/settings"
+                }
+              },
+              "status": "OK"
+            }
+          ]
+        },
+        {
+          "name": "get settings",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{admin token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": ""
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "settings"
+              ],
+              "raw": "{{base_url}}/api/v1/settings"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "settings"
+    },
+    {
+      "item": [
+        {
+          "name": "send email",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"email\": \"janasobih469@gmail.com\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "changePassword",
+                "request"
+              ],
+              "raw": "{{base_url}}/api/v1/auth/changePassword/request"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "send otp",
+          "request": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"email\": \"janasobih469@gmail.com\",\r\n  \"otp\": \"222774\"\r\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "changePassword",
+                "otp"
+              ],
+              "raw": "{{base_url}}/api/v1/auth/changePassword/otp"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "change password",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{json_web_token_1cyy}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"newPassword\": \"123456789\",\r\n  \"confirmPassword\": \"123456789\"\r\n}"
+            },
+            "header": [],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "changePassword"
+              ],
+              "raw": "{{base_url}}/api/v1/auth/changePassword"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "change password"
+    },
+    {
+      "item": [
+        {
+          "name": "appointment",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reports",
+                "appointments"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "pending"
+                },
+                {
+                  "key": "type",
+                  "value": "consultation"
+                },
+                {
+                  "disabled": true,
+                  "key": "doctor",
+                  "value": "6aa590567ea21f2e8355418a"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2026-10-18"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-10-18"
+                }
+              ],
+              "raw": "{{base_url}}/api/v1/reports/appointments?status=pending&type=consultation&startDate=2026-10-18&endDate=2026-10-18"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "invoice",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reports",
+                "invoice",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "paid"
+                },
+                {
+                  "key": "paymentMethod",
+                  "value": "cash"
+                },
+                {
+                  "key": "startDate",
+                  "value": "2026-10-18"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-10-18"
+                },
+                {
+                  "key": "doctor",
+                  "value": "6abf9815e74ce74e99f463e6"
+                }
+              ],
+              "raw": "{{base_url}}/api/v1/reports/invoice/?status=paid&paymentMethod=cash&startDate=2026-10-18&endDate=2026-10-18&doctor=6abf9815e74ce74e99f463e6"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "patient",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "reports",
+                "patient"
+              ],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2026-10-18"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-10-18"
+                }
+              ],
+              "raw": "{{base_url}}/api/v1/reports/patient?startDate=2026-10-18&endDate=2026-10-18"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "reports"
+    },
+    {
+      "item": [
+        {
+          "name": "get all notification",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "GET",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "notification"
+              ],
+              "raw": "{{base_url}}/api/v1/notification"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "mark as read",
+          "request": {
+            "auth": {
+              "bearer": [
+                {
+                  "key": "token",
+                  "type": "string",
+                  "value": "{{user token}}"
+                }
+              ],
+              "type": "bearer"
+            },
+            "header": [],
+            "method": "PATCH",
+            "url": {
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "notification",
+                "6ad4ad8c3352ed6b99ca41f5"
+              ],
+              "raw": "{{base_url}}/api/v1/notification/6ad4ad8c3352ed6b99ca41f5"
+            }
+          },
+          "response": []
+        }
+      ],
+      "name": "notification"
+    }
+  ],
+  "variable": [
+    {
+      "key": "auth_secret_1bpd",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0thq",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_096x",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0fzu",
+      "secret": true
+    }
+  ]
+}

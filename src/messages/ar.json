@@ -766,6 +766,42 @@
     "empty": "لا توجد بيانات"
   },
   "reports": {
+    "title": "التقارير",
+    "subtitle": "متابعة المواعيد والتحصيلات ونشاط المرضى.",
+    "tabsLabel": "أنواع التقارير",
+    "summary": {
+      "totalAppointments": "إجمالي المواعيد",
+      "pendingAppointments": "قيد الانتظار",
+      "completedAppointments": "مكتملة",
+      "cancelledAppointments": "ملغاة",
+      "totalInvoices": "إجمالي الفواتير",
+      "invoiceAmount": "قيمة الفواتير",
+      "totalPaid": "إجمالي المدفوع",
+      "totalRemaining": "إجمالي المتبقي",
+      "uniquePatients": "المرضى الفريدون",
+      "totalVisits": "إجمالي الزيارات",
+      "newPatients": "مرضى جدد"
+    },
+    "statusLabels": {
+      "pending": "قيد الانتظار",
+      "confirmed": "مؤكد",
+      "completed": "مكتمل",
+      "cancelled": "ملغى",
+      "no-show": "لم يحضر"
+    },
+    "appointmentTypes": {
+      "consultation": "استشارة",
+      "follow-up": "متابعة",
+      "check-up": "فحص",
+      "emergency": "طوارئ",
+      "other": "أخرى"
+    },
+    "invoiceStatuses": {
+      "paid": "مدفوعة",
+      "partial": "مدفوعة جزئيًا",
+      "unpaid": "غير مدفوعة"
+    },
+    "patientTypes": { "new": "جديد", "existing": "حالي", "returning": "متردد" },
     "filters": {
       "title": "البحث في التقارير",
       "reportType": "نوع التقرير",
@@ -778,10 +814,22 @@
       "selectPlaceholder": "اختر",
       "addCondition": "إضافة شرط",
       "resetFilters": "الغاء",
-      "applyFilters": "تنفيذ"
+      "applyFilters": "تنفيذ",
+      "allDoctors": "جميع الأطباء",
+      "doctor": "الطبيب",
+      "appointmentType": "نوع الموعد",
+      "startDate": "تاريخ البدء",
+      "endDate": "تاريخ الانتهاء",
+      "valuePlaceholder": "أدخل قيمة API",
+      "allStatuses": "كل الحالات",
+      "allTypes": "كل أنواع المواعيد",
+      "allPaymentMethods": "كل طرق الدفع"
     },
     "reportTypes": {
-      "booking": "تقارير الحجوزات"
+      "booking": "تقارير الحجوزات",
+      "appointments": "تقرير المواعيد",
+      "invoices": "تقرير الفواتير",
+      "patients": "تقرير المرضى"
     },
     "bookingTypes": {
       "consultation": "كشف",
@@ -795,7 +843,9 @@
     },
     "paymentMethods": {
       "cash": "نقدًا",
-      "visa": "فيزا"
+      "visa": "فيزا",
+      "card": "بطاقة",
+      "insurance": "تأمين"
     },
     "table": {
       "title": "تقارير الحجوزات",
@@ -809,8 +859,46 @@
       "actions": "التحكم",
       "edit": "تعديل",
       "delete": "حذف",
-      "empty": "لا توجد تقارير"
-    }
+      "empty": "لا توجد تقارير",
+      "loading": "جاري تحميل التقرير...",
+      "loadError": "تعذر تحميل التقرير",
+      "retry": "إعادة المحاولة",
+      "appointments": "تقرير المواعيد",
+      "invoices": "تقرير الفواتير",
+      "patients": "تقرير المرضى",
+      "columns": {
+        "patient": "المريض",
+        "name": "الاسم",
+        "doctor": "الطبيب",
+        "date": "التاريخ",
+        "time": "الوقت",
+        "type": "النوع",
+        "status": "الحالة",
+        "invoiceNumber": "رقم الفاتورة",
+        "total": "الإجمالي",
+        "paid": "المدفوع",
+        "remaining": "المتبقي",
+        "paymentMethod": "طريقة الدفع",
+        "phone": "الهاتف",
+        "email": "البريد الإلكتروني",
+        "nationality": "الجنسية",
+        "patientType": "نوع المريض",
+        "createdAt": "تاريخ التسجيل",
+        "other": "التفاصيل",
+        "appointmentDateTime": "تاريخ ووقت الموعد",
+        "invoiceDate": "تاريخ الفاتورة",
+        "duration": "المدة",
+        "services": "الخدمات",
+        "visits": "الزيارات"
+      },
+      "patientUnavailable": "بيانات المريض غير متاحة",
+      "minutes": "{count} دقيقة",
+      "price": "السعر",
+      "discount": "الخصم",
+      "noServices": "لا توجد خدمات مسجلة",
+      "emptyVisits": "لا توجد زيارات للأطباء خلال هذه الفترة"
+    },
+    "visitsByDoctor": "الزيارات حسب الطبيب"
   },
   "appointments": {
     "pageTitle": "الحجوزات",

@@ -764,6 +764,46 @@
     "empty": "No data recorded"
   },
   "reports": {
+    "title": "Reports",
+    "subtitle": "Track appointments, collections, and patient activity.",
+    "tabsLabel": "Report types",
+    "summary": {
+      "totalAppointments": "Total appointments",
+      "pendingAppointments": "Pending",
+      "completedAppointments": "Completed",
+      "cancelledAppointments": "Cancelled",
+      "totalInvoices": "Total invoices",
+      "invoiceAmount": "Invoice amount",
+      "totalPaid": "Total paid",
+      "totalRemaining": "Total remaining",
+      "uniquePatients": "Unique patients",
+      "totalVisits": "Total visits",
+      "newPatients": "New patients"
+    },
+    "statusLabels": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "no-show": "No show"
+    },
+    "appointmentTypes": {
+      "consultation": "Consultation",
+      "follow-up": "Follow-up",
+      "check-up": "Check-up",
+      "emergency": "Emergency",
+      "other": "Other"
+    },
+    "invoiceStatuses": {
+      "paid": "Paid",
+      "partial": "Partial",
+      "unpaid": "Unpaid"
+    },
+    "patientTypes": {
+      "new": "New",
+      "existing": "Existing",
+      "returning": "Returning"
+    },
     "filters": {
       "title": "Search Reports",
       "reportType": "Report Type",
@@ -776,10 +816,22 @@
       "selectPlaceholder": "Select",
       "addCondition": "Add Condition",
       "resetFilters": "Cancel",
-      "applyFilters": "Apply"
+      "applyFilters": "Apply",
+      "allDoctors": "All doctors",
+      "doctor": "Doctor",
+      "appointmentType": "Appointment type",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "valuePlaceholder": "Enter an API value",
+      "allStatuses": "All statuses",
+      "allTypes": "All appointment types",
+      "allPaymentMethods": "All payment methods"
     },
     "reportTypes": {
-      "booking": "Booking Reports"
+      "booking": "Booking Reports",
+      "appointments": "Appointments report",
+      "invoices": "Invoices report",
+      "patients": "Patients report"
     },
     "bookingTypes": {
       "consultation": "Consultation",
@@ -793,7 +845,9 @@
     },
     "paymentMethods": {
       "cash": "Cash",
-      "visa": "Visa"
+      "visa": "Visa",
+      "card": "Card",
+      "insurance": "Insurance"
     },
     "table": {
       "title": "Booking Reports",
@@ -807,8 +861,46 @@
       "actions": "Actions",
       "edit": "Edit",
       "delete": "Delete",
-      "empty": "No Reports Found"
-    }
+      "empty": "No reports found",
+      "loading": "Loading report...",
+      "loadError": "Failed to load report",
+      "retry": "Retry",
+      "appointments": "Appointments report",
+      "invoices": "Invoices report",
+      "patients": "Patients report",
+      "columns": {
+        "patient": "Patient",
+        "name": "Name",
+        "doctor": "Doctor",
+        "date": "Date",
+        "time": "Time",
+        "type": "Type",
+        "status": "Status",
+        "invoiceNumber": "Invoice no.",
+        "total": "Total",
+        "paid": "Paid",
+        "remaining": "Remaining",
+        "paymentMethod": "Payment method",
+        "phone": "Phone",
+        "email": "Email",
+        "nationality": "Nationality",
+        "patientType": "Patient type",
+        "createdAt": "Registered on",
+        "other": "Details",
+        "appointmentDateTime": "Appointment date & time",
+        "invoiceDate": "Invoice date",
+        "duration": "Duration",
+        "services": "Services",
+        "visits": "Visits"
+      },
+      "patientUnavailable": "Patient details unavailable",
+      "minutes": "{count} min",
+      "price": "Price",
+      "discount": "Discount",
+      "noServices": "No services recorded",
+      "emptyVisits": "No doctor visits in this period"
+    },
+    "visitsByDoctor": "Visits by doctor"
   },
   "appointments": {
     "pageTitle": "Appointments",

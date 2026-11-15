@@ -3,17 +3,16 @@ Clinica project structure
 
 clinica/
 |-- docs/
-|   |-- folder-srtucture.txt             # This document
-|   `-- New Collection.postman_collection update 2
+|   |-- folder-srtucture.txt                         # This document
+|   `-- New Collection.postman_collection update 6.postman_collection update 6
 |-- public/
-|   |-- fonts/                           # Cairo font files
-|   `-- *.svg                            # Public SVG assets
+|   |-- fonts/                                       # Cairo font files
+|   `-- *.svg                                        # Public SVG assets
 |-- src/
-|   |-- app/                             # Next.js App Router routes
-|   |   |-- layout.tsx                   # Root layout
-|   |   |-- globals.css                  # Global styles
-|   |   |-- (public)/
-|   |   |   `-- page.tsx                 # Landing page
+|   |-- app/                                         # Next.js App Router routes
+|   |   |-- layout.tsx                               # Root layout
+|   |   |-- globals.css                              # Global styles
+|   |   |-- (public)/page.tsx                        # Landing page
 |   |   |-- (auth)/
 |   |   |   |-- layout.tsx
 |   |   |   |-- sign-in/page.tsx
@@ -22,17 +21,13 @@ clinica/
 |   |   |   |-- otp/page.tsx
 |   |   |   `-- reset-pass/page.tsx
 |   |   `-- (dashboard)/
-|   |       |-- layout.tsx               # Dashboard shell
+|   |       |-- layout.tsx                           # Dashboard shell
 |   |       `-- dashboard/
-|   |           |-- page.tsx             # Dashboard overview
+|   |           |-- page.tsx                         # Dashboard overview
 |   |           |-- appointments/page.tsx
-|   |           |-- doctors/
-|   |           |   |-- page.tsx
-|   |           |   `-- [id]/page.tsx
-|   |           |-- invoices/page.tsx
-|   |           |-- patients/
-|   |           |   |-- page.tsx
-|   |           |   `-- [id]/page.tsx
+|   |           |-- doctors/{page,[id]/page}.tsx
+|   |           |-- invoices/{page,[id]/page}.tsx
+|   |           |-- patients/{page,[id]/page}.tsx
 |   |           |-- profile/
 |   |           |   |-- page.tsx
 |   |           |   |-- update/page.tsx
@@ -43,46 +38,41 @@ clinica/
 |   |   |-- icons/icons.tsx
 |   |   |-- images/OIP.webp
 |   |   `-- image.tsx
-|   |-- components/ui/                   # shadcn/ui primitives
+|   |-- components/ui/                               # UI primitives
 |   |-- hooks/useCurrentUser.ts
 |   |-- i18n/request.ts
 |   |-- lib/
-|   |   |-- actions/                     # Theme and locale actions
+|   |   |-- actions/                                 # Theme and locale actions
 |   |   |-- config/env.ts
 |   |   |-- cn.ts
 |   |   |-- pickMessages.ts
 |   |   `-- utils.ts
-|   |-- messages/                        # Arabic and English translations
-|   |-- modules/                         # Feature-specific code
-|   |   |-- auth/
-|   |   |   |-- hooks/
-|   |   |   |-- schema/
-|   |   |   |-- sign-in/components/organisms/
-|   |   |   |-- signup/components/organisms/
-|   |   |   `-- reset-pass/components/{molecules,organisms}/
-|   |   |-- dashboard/
-|   |   |   |-- appointments/            # Appointment UI, hooks, schema, data
-|   |   |   |-- doctors/                 # Doctor profiles and reservations
-|   |   |   |-- invoices/                # Invoice UI and PDF
-|   |   |   |-- patients/                # Patient records, visits, invoices
-|   |   |   |-- profile/                 # Profile and credential editing
-|   |   |   |-- reports/                 # Reports and filters
-|   |   |   |-- settings/                # Clinic settings and work hours
-|   |   |   |-- components/              # Dashboard-wide components
-|   |   |   |-- context/
-|   |   |   |-- hooks/
-|   |   |   |-- lib/
-|   |   |   `-- templates/
-|   |   `-- landing/components/{atoms,molecules,organisms}/
-|   |-- providers/                       # Theme and React Query providers
-|   |-- services/                        # Axios and token services
-|   |-- shared/                          # Cross-feature components, hooks, types and styles
-|   |   |-- components/{atoms,molecules,organisms}/
+|   |-- messages/                                    # Arabic and English translations
+|   |-- modules/                                     # Feature-specific code
+|   |   |-- auth/                                    # Authentication forms, hooks, schemas
+|   |   |-- landing/components/{atoms,molecules,organisms}/
+|   |   `-- dashboard/
+|   |       |-- appointments/                        # Appointment UI, hooks, schema, data
+|   |       |-- doctors/                             # Doctor profiles and reservations
+|   |       |-- invoices/                            # Invoice UI and PDF generation
+|   |       |-- patients/                            # Patient records, visits, and invoices
+|   |       |-- profile/                             # Profile, credentials, and awards
+|   |       |-- reports/                             # Reports and filters
+|   |       |-- settings/                            # Clinic settings and work hours
+|   |       |-- components/                          # Dashboard-wide components
+|   |       |-- context/
+|   |       |-- hooks/
+|   |       |-- lib/
+|   |       `-- templates/
+|   |-- providers/                                   # Theme and React Query providers
+|   |-- services/                                    # Axios and token services
+|   |-- shared/                                      # Cross-feature components, hooks, types, styles
+|   |   |-- components/{atoms,molecules,organisms,skeletons}/
 |   |   |-- hooks/
 |   |   |-- styles/
 |   |   `-- types/
 |   `-- middleware.ts
-|-- components.json                      # shadcn/ui configuration
+|-- components.json                                  # shadcn/ui configuration
 |-- eslint.config.mjs
 |-- next.config.ts
 |-- package.json
@@ -92,6 +82,6 @@ clinica/
 
 Notes
 -----
-- `app/` contains routes only; UI and feature logic live in `modules/`.
+- `app/` contains route definitions; UI and feature logic live in `modules/`.
 - `shared/` contains code reused across multiple modules.
 - Route groups such as `(auth)` and `(dashboard)` do not appear in URLs.

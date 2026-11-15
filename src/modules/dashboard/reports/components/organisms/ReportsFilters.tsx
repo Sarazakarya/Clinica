@@ -1,208 +1,159 @@
 "use client";
 
-import { Plus, CalendarDays, Search, X, ArrowRight, ArrowLeft } from "lucide-react";
+import { CalendarDays, Search, X } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
-
+import useDoctors from "@/modules/dashboard/doctors/hooks/useDoctors";
+import Button from "@/shared/components/atoms/Button";
 import Input from "@/shared/components/atoms/Input";
 import Select from "@/shared/components/atoms/Select";
-import Button from "@/shared/components/atoms/Button";
 import Text from "@/shared/components/atoms/Text";
-
-type ReportFiltersState = {
-    reportType: string;
-    receivedFrom: string;
-    bookingType: string;
-    status: string;
-    bookingDate: string;
-    paymentMethod: string;
-};
-
-const initialFilters: ReportFiltersState = {
-    reportType: "",
-    receivedFrom: "",
-    bookingType: "",
-    status: "",
-    bookingDate: "",
-    paymentMethod: "",
-};
+import type { ReportsFilters as ReportsFiltersState } from "../../types/reports";
+import {
+  APPOINTMENT_STATUSES,
+  APPOINTMENT_TYPES,
+} from "@/modules/dashboard/appointments/lib/appointmentOptions";
 
 interface ReportsFiltersProps {
-    onChange?: (filters: ReportFiltersState) => void;
+  filters: ReportsFiltersState;
+  onChange: (filters: ReportsFiltersState) => void;
+  onApply: () => void;
+  onReset: () => void;
 }
 
 export default function ReportsFilters({
-    onChange,
+  filters,
+  onChange,
+  onApply,
+  onReset,
 }: ReportsFiltersProps) {
-    const t = useTranslations("reports");
-    const [filters, setFilters] = useState(initialFilters);
+  const t = useTranslations("reports");
+  const { data: doctors = [] } = useDoctors();
+  const update = (key: keyof ReportsFiltersState, value: string) =>
+    onChange({ ...filters, [key]: value });
+  const doctorOptions = [
+    { value: "", label: t("filters.allDoctors") },
+    ...doctors.map((doctor) => ({ value: doctor.id, label: doctor.name })),
+  ];
 
-    const updateFilter = (
-        key: keyof ReportFiltersState,
-        value: string,
-    ) => {
-        const nextFilters = {
-            ...filters,
-            [key]: value,
-        };
+  return (
+    <section className="ds-bg-card ds-shadow-sm rounded-[18px] p-5 sm:p-6">
+      <h2 className="ds-text mb-6 text-lg font-bold">{t("filters.title")}</h2>
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {filters.report === "appointments" && (
+          <Select
+            label={t("filters.status")}
+            value={filters.status}
+            onChange={(value) => update("status", value)}
+            options={[
+              { value: "", label: t("filters.allStatuses") },
+              ...APPOINTMENT_STATUSES.map((value) => ({
+                value,
+                label: t(`statusLabels.${value}`),
+              })),
+            ]}
+          />
+        )}
+        {filters.report === "appointments" && (
+          <Select
+            label={t("filters.appointmentType")}
+            value={filters.type}
+            onChange={(value) => update("type", value)}
+            options={[
+              { value: "", label: t("filters.allTypes") },
+              ...APPOINTMENT_TYPES.map((value) => ({
+                value,
+                label: t(`appointmentTypes.${value}`),
+              })),
+            ]}
+          />
+        )}
+        {filters.report === "invoices" && (
+          <Select
+            label={t("filters.status")}
+            value={filters.status}
+            onChange={(value) => update("status", value)}
+            options={[
+              { value: "", label: t("filters.allStatuses") },
+              ...["paid", "partial", "unpaid"].map((value) => ({
+                value,
+                label: t(`invoiceStatuses.${value}`),
+              })),
+            ]}
+          />
+        )}
+        {filters.report === "invoices" && (
+          <Select
+            label={t("filters.paymentMethod")}
+            value={filters.paymentMethod}
+            onChange={(value) => update("paymentMethod", value)}
+            options={[
+              { value: "", label: t("filters.allPaymentMethods") },
+              ...["cash", "card", "insurance"].map((value) => ({
+                value,
+                label: t(`paymentMethods.${value}`),
+              })),
+            ]}
+          />
+        )}
+        {filters.report !== "patients" && (
+          <Select
+            label={t("filters.doctor")}
+            value={filters.doctor}
+            onChange={(value) => update("doctor", value)}
+            options={doctorOptions}
+          />
+        )}
+        <DateFilter
+          label={t("filters.startDate")}
+          value={filters.startDate}
+          onChange={(value) => update("startDate", value)}
+        />
+        <DateFilter
+          label={t("filters.endDate")}
+          value={filters.endDate}
+          onChange={(value) => update("endDate", value)}
+        />
+      </div>
+      <div className="mt-6 flex flex-wrap justify-end gap-3">
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          className="gap-2"
+          onClick={onReset}
+        >
+          <X size={18} />
+          {t("filters.resetFilters")}
+        </Button>
+        <Button type="button" size="sm" className="gap-2" onClick={onApply}>
+          <Search size={18} />
+          {t("filters.applyFilters")}
+        </Button>
+      </div>
+    </section>
+  );
+}
 
-        setFilters(nextFilters);
-        onChange?.(nextFilters);
-    };
-
-    const reportTypeOptions = [
-        {
-            value: "booking",
-            label: t("reportTypes.booking"),
-        },
-    ];
-
-    const bookingTypeOptions = [
-        {
-            value: "consultation",
-            label: t("bookingTypes.consultation"),
-        },
-        {
-            value: "regular",
-            label: t("bookingTypes.regular"),
-        },
-        {
-            value: "emergency",
-            label: t("bookingTypes.emergency"),
-        },
-    ];
-
-    const statusOptions = [
-        {
-            value: "paid",
-            label: t("statuses.paid"),
-        },
-        {
-            value: "pending",
-            label: t("statuses.pending"),
-        },
-        {
-            value: "overdue",
-            label: t("statuses.overdue"),
-        },
-    ];
-
-    const paymentMethodOptions = [
-        {
-            value: "cash",
-            label: t("paymentMethods.cash"),
-        },
-        {
-            value: "visa",
-            label: t("paymentMethods.visa"),
-        },
-    ];
-
-    return (
-        <section className="ds-bg-card ds-shadow-sm rounded-[18px] p-5 sm:p-6">
-            <div className="mb-6">
-                <h2 className="ds-text text-lg font-bold">
-                    {t("filters.title")}
-                </h2>
-            </div>
-
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-                <Select
-                    label={t("filters.reportType")}
-                    value={filters.reportType}
-                    onChange={(value) => updateFilter("reportType", value)}
-                    options={reportTypeOptions}
-                    placeholder={t("filters.selectPlaceholder")}
-                />
-
-                <div className="flex flex-col gap-2">
-                    <Text size="sm" variant="secondary">
-                        {t("filters.receivedFrom")}
-                    </Text>
-                    <Input
-                        placeholder={t("filters.receivedFromPlaceholder")}
-                        value={filters.receivedFrom}
-                        onChange={(event) =>
-                            updateFilter("receivedFrom", event.target.value)}
-                        trailingIcon={<Search size={18} />}
-                    />
-                </div>
-
-                <Select
-                    label={t("filters.bookingType")}
-                    value={filters.bookingType}
-                    onChange={(value) => updateFilter("bookingType", value)}
-                    options={bookingTypeOptions}
-                    placeholder={t("filters.selectPlaceholder")}
-                />
-
-                <Select
-                    label={t("filters.status")}
-                    value={filters.status}
-                    onChange={(value) => updateFilter("status", value)}
-                    options={statusOptions}
-                    placeholder={t("filters.selectPlaceholder")}
-                />
-
-                <div className="flex flex-col gap-2">
-                    <Text size="sm" variant="secondary">
-                        {t("filters.bookingDate")}
-                    </Text>
-
-                    <Input
-                        type="date"
-                        value={filters.bookingDate}
-                        onChange={(event) =>
-                            updateFilter("bookingDate", event.target.value)
-                        }
-                        trailingIcon={<CalendarDays size={18} />}
-                    />
-                </div>
-
-                <Select
-                    label={t("filters.paymentMethod")}
-                    value={filters.paymentMethod}
-                    onChange={(value) => updateFilter("paymentMethod", value)}
-                    options={paymentMethodOptions}
-                    placeholder={t("filters.selectPlaceholder")}
-                />
-            </div>
-
-            <div className="mt-6 flex justify-between">
-                <Button
-                    type="button"
-                    variant="primary"
-                    size="sm"
-                    className="gap-2"
-                >
-                    <Plus size={18} />
-                    {t("filters.addCondition")}
-                </Button>
-                <div className="flex gap-2">
-
-                    <Button
-                        type="button"
-                        variant="outline"
-                        size="sm"
-                        className="gap-2"
-                    >
-                        <X size={18} />
-                        {t("filters.resetFilters")}
-                    </Button>
-                    <Button
-                        type="button"
-                        variant="primary"
-                        size="sm"
-                        className="gap-2"
-                    >
-                        {t("filters.applyFilters")}
-                        <ArrowRight
-                            size={18}
-                            className="rtl:scale-x-[-1]"
-                        />
-                    </Button>
-                </div>
-            </div>
-        </section>
-    );
+function DateFilter({
+  label,
+  value,
+  onChange,
+}: {
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  return (
+    <div className="flex flex-col gap-2">
+      <Text size="sm" variant="secondary">
+        {label}
+      </Text>
+      <Input
+        type="date"
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+        trailingIcon={<CalendarDays size={18} />}
+      />
+    </div>
+  );
 }

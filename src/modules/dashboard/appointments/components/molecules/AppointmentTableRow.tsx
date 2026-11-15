@@ -37,14 +37,15 @@ export default function AppointmentTableRow({
       <td className="px-5 py-4 text-sm">
         <Badge
           tone={appointmentStatusTone[appointment.status]}
-          solid={appointmentStatusSolid[appointment.status]}>
+          solid={appointmentStatusSolid[appointment.status]}
+        >
           {labels.statuses[appointment.status]}
         </Badge>
       </td>
-      <td className="ds-text-secondary px-5 py-4 text-sm" dir="ltr">
+      <td className="ds-text-secondary px-5 py-4 text-sm">
         {appointment.bookingDate}
       </td>
-      <td className="ds-text-secondary px-5 py-4 text-sm" dir="ltr">
+      <td className="ds-text-secondary px-5 py-4 text-sm">
         {appointment.bookingTime}
       </td>
       <td className="px-5 py-4">
